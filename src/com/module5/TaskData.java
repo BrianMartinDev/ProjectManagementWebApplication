@@ -8,13 +8,13 @@ public class TaskData {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="id")
+    @Column(name="id", unique = true, nullable = false)
     private int id;
 
-    @Column(name="todo")
+    @Column(name="todo", unique = true, nullable = false, length = 255)
     private String todo;
 
-    @Column(name="description")
+    @Column(name="description", unique = false, nullable = false, length = 255)
     private String description;
 
     public TaskData() {
