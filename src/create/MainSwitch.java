@@ -25,35 +25,31 @@ public class MainSwitch {
             switch (command) {
                 case "1": // to Add a to-do item.
 
-                    CreateTask newTask = new CreateTask();
-                    newTask.createMethod();
-
+                    Crud createTask = new Crud();
+                    createTask.createMethod();
                     break;
 
                 case "2": // to Delete a to-do item.
-
-                    DeleteTask taskDelete = new DeleteTask();
-                    taskDelete.deleteMethod();
-
+                    Crud deleteTask = new Crud();
+                    deleteTask.deleteMethod();
                     break;
 
                 case "3": // to Query a to-do item.
 
-                    QueryTask taskQuery = new QueryTask();
-                    taskQuery.queryTaskMethod();
-
+                    Crud readTask = new Crud();
+                    readTask.queryTaskMethod();
                     break;
 
                 case "4": // retrieve to do item based on the id: primary key
 
-                    GetTask taskGet = new GetTask();
-                    taskGet.getTaskMethod();
+                    Crud getTask = new Crud();
+                    getTask.getTaskMethod();
 
                     break;
                 case "5": // update task
 
-                    UpdateTask editTask = new UpdateTask();
-                    editTask.updateMethod();
+                    Crud updateTask = new Crud();
+                    updateTask.updateMethod();
                     break;
 
                 default:
